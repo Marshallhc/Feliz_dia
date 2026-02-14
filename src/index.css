@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 9% 95%;
+    --foreground: 0 0% 80%;
+
+    --card: 40 9% 95%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 40 9% 95%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 0 0% 10%;
+    --primary-foreground: 40 9% 95%;
+
+    --secondary: 36 14% 88%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 36 10% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 30 15% 82%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 36 10% 85%;
+    --input: 36 10% 85%;
+    --ring: 0 0% 10%;
+
+    --radius: 0rem;
+
+    --sidebar-background: 40 9% 95%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 0 0% 10%;
+    --sidebar-primary-foreground: 40 9% 95%;
+    --sidebar-accent: 36 14% 88%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 36 10% 85%;
+    --sidebar-ring: 0 0% 10%;
+
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 40 9% 92%;
+    --card: 0 0% 8%;
+    --card-foreground: 40 9% 92%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 40 9% 92%;
+    --primary: 40 9% 92%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 40 9% 92%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 40 5% 60%;
+    --accent: 0 0% 18%;
+    --accent-foreground: 40 9% 92%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 40 9% 92%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 40 9% 92%;
+    --sidebar-primary: 40 9% 92%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 40 9% 92%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 40 9% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-editorial-xl {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+  }
+
+  .text-editorial-lg {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+  }
+
+  .text-editorial-md {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .text-body {
+    font-family: var(--font-sans);
+    font-size: clamp(0.875rem, 1.2vw, 1.1rem);
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    font-weight: 300;
+  }
+
+  .text-caption {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
